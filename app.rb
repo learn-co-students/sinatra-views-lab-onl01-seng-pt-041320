@@ -14,7 +14,6 @@ class App < Sinatra::Base
 	end
 
 	get '/date' do
-		DateTime.new(Wednesday, November 18, 2015)
 		
 		erb :date
 	end
