@@ -1,3 +1,5 @@
+require 'date'
+
 class App < Sinatra::Base
 
 	get '/hello' do
@@ -6,8 +8,15 @@ class App < Sinatra::Base
 	end
 
 	get '/goodbye' do
-		
+		@name = "Joe"
+
 		erb :goodbye
+	end
+
+	get '/date' do
+		DateTime.new(Wednesday, November 18, 2015)
+		
+		erb :date
 	end
 
 
